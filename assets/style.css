@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'titr';
+    src: url('./fonts/BTitrBold.eot?#') format('eot'),
+    url('./fonts/BTitrBold.ttf') format('truetype'),
+    url('./fonts/BTitrBold.woff') format('woff');
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+body {
+    width: 5cm;
+    height: auto;
+    font-family: 'titr' !important;
+}
+
+.flexItem {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    /*min-height: 7cm;*/
+    flex-direction: row;
+    border: solid 5px #000000;
+    border-radius: 2em;
+}
+
+.flexItem .productName {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 3em;
+    margin-left: -1.5em;
+    text-align: center;
+    /*display: flex;*/
+    flex: 1;
+
+}
+
+.flexItem .ibutn .price {
+
+    text-align: left;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 4em;
+    margin-left: -1.8em;
+    /*display: flex;*/
+    flex: 1;
+    padding-left: 1cm;
+}
+
+.ibutn {
+    flex: 10;
+    flex-direction: column;
+}
+
+.image {
+    flex: 1;
+    width: 2cm;
+    transform: rotate(90deg);
+    margin: 10px;
+    bottom: 0px;
+}

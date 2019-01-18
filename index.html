@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<meta charset="utf-8">
+<head>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/>
+    <title>border shampoo</title>
+</head>
+<body>
+<div class="menu">
+    <input type="text" placeholder="اسم محصول" id="nameD" onkeyup="set()">
+    <input type="number" placeholder="قیمت محصول" id="priceD" onkeyup="set()">
+</div>
+<div class="container">
+    <div class="flexItem">
+        <div class="ibutn">
+            <img src="./assets/img/alian.jpg" alt="alian" class="image">
+            <div class="price">
+                <p id="price">1000</p>
+            </div>
+        </div>
+        <div class="productName">
+            <h3 id="name">اسم جنس</h3>
+        </div>
+    </div>
+</div>
+<script>
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    function set() {
+        let name =  document.getElementById("nameD").value;
+        let price =  document.getElementById("priceD").value;
+        document.getElementById("name").innerHTML =  (name);
+        document.getElementById("price").innerHTML =   numberWithCommas(price);
+    }
+
+</script>
+</body>
+</html>
